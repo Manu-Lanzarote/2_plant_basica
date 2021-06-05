@@ -8,9 +8,10 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Monserrat', sans-serif;
     }
     html, body{
-        background-color: grey;
+        background-color: white;
         overflow-x:hidden;
     }
+
 `;
 
 export default GlobalStyle;

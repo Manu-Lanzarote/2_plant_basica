@@ -1,7 +1,7 @@
 import {useState, useRef, useEffect} from 'react'
 
 import styled, {css} from 'styled-components/macro'
-import { Button } from './Button';
+import { Button } from './styled_components/Button';
 
 //Flecha de los botones
 import {IoMdArrowForward} from 'react-icons/io'
@@ -80,19 +80,19 @@ const HeroContent = styled.div`
     max-width: 1600px;
     width: calc(100% - 100px);
     color: white;
+    padding-left: 10%;
 
     h1{
         font-size: clamp(1rem, 8vw, 2rem);
         font-weight: 400;
         text-transform: uppercase;
-        text-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+        text-shadow: 2px 2px 5px black;
         text-align: left;
         margin-bottom: 1rem;
     }
 
     p{
-        margin-bottom: 1.2rem;
-        text-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+        text-shadow: 2px 2px 5px black;
     }
 `;
 
@@ -102,8 +102,8 @@ const Arrow = styled(IoMdArrowForward)`
 
 const SliderButtons = styled.div`
     position: absolute;
-    bottom: 50px;
-    right: 30px;
+    bottom: 60px;
+    right: 80px;
     display: flex;
     z-index: 10;
 `;
@@ -114,12 +114,13 @@ const arrowButtons = css`
     height: 45px;
     color: white;
     cursor: pointer;
-    background-color: #635C93;;
+    background-color: #635C93;
     border-radius: 50px;
     padding: 8px;
     margin-right: 1rem;
     user-select: none;
     transition: 0.3.s;
+    box-shadow: 1px 1px 5px black;
     &:hover{
         background-color: #9f99ca;
         transform: scale(1.05);
@@ -187,7 +188,7 @@ const Hero = ({slides}) => {
                                     <HeroContent>
                                         <h1>{slide.title}</h1>
                                         <p>{slide.price}</p>
-                                        <Button size to={slide.path} primary='true'>
+                                        <Button size to={slide.path} primary='true' info>
                                             {slide.label}
                                             <Arrow/>
                                         </Button>

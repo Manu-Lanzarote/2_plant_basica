@@ -1,22 +1,21 @@
 import { FaTimes } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components'
-import { menuData } from '../data/menuData';
-import { Button } from './Button';
+import { menuData } from '../../data/menuData';
 
 const DropdownContainer = styled.div`
 position: fixed;
 z-index: 999;
-width: 100%;
+width: 69%;
 height: 100%;
-background:#635C93;
+background:#635c93f9;
 display: grid;
 align-items: center;
 top: 0;
 left: 0;
 transition: 0.3s ease-in-out;
-opacity: 1;
-top: 0;
+opacity: ${({isOpen}) => (isOpen ? '1' : '0')};
+top: ${({isOpen}) => (isOpen ? '0' : '-100%')};;
 `
 const Icon = styled.div`
 position: absolute;
@@ -36,7 +35,14 @@ outline: none;
 const CloseIcon = styled(FaTimes)`
 color: white;
 `
-const DropdownWrapper = styled.div``
+const DropdownWrapper = styled.div`
+h1{
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+`
 
 const DropdownMenu = styled.div`
 display:grid;
@@ -58,19 +64,17 @@ color: white;
 font-size: 1.5rem;
 text-decoration: none;
 transition: 0.2s ease-in-out;
-`
-const BtnWrap = styled.div`
-display: flex;
-justify-content: center;
+padding: 1rem;
 `
 
-const Dropdown = () => {
+const Dropdown = ({isOpen, toggle}) => {
     return (
-            <DropdownContainer>
-                <Icon>
+            <DropdownContainer isOpen={isOpen} onClick={toggle}>
+                <Icon onClick={toggle}>
                     <CloseIcon/>
-                </Icon>    
+                </Icon>
                     <DropdownWrapper>
+                        <h1>NEW COLONY CLUB</h1>
                         <DropdownMenu>
                             {menuData.map((item, index) => (
                                 <DropdownLink to={item.link} key={index}>
@@ -78,11 +82,6 @@ const Dropdown = () => {
                                 </DropdownLink>
                             ))}
                         </DropdownMenu>
-                        <BtnWrap>
-                            <Button colorDrop to='/contact'>
-                                Contact Us
-                            </Button>
-                        </BtnWrap>
                     </DropdownWrapper>
             </DropdownContainer>
     )
