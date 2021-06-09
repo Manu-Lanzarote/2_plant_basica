@@ -1,7 +1,7 @@
-import Hero from "../Hero";
-import InfoSection from '../InfoSection';
-import Listings from '../Listings';
-import Features from '../Features';
+import Hero from "../pages/index/Hero";
+import InfoSection from '../pages/index/InfoSection';
+import Listings from '../pages/index/Listings';
+import Features from '../pages/index/Features';
 
 //Data de Hero
 import { sliderData } from "../../data/sliderData";

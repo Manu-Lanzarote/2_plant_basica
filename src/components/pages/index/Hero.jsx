@@ -1,7 +1,7 @@
 import {useState, useRef, useEffect} from 'react'
 
 import styled, {css} from 'styled-components/macro'
-import { Button } from './styled_components/Button';
+import { Button } from '../../styled_components/Button';
 
 //Flecha de los botones
 import {IoMdArrowForward} from 'react-icons/io'
@@ -10,8 +10,10 @@ import {IoMdArrowForward} from 'react-icons/io'
 import {IoMdArrowRoundBack} from 'react-icons/io'
 import {IoMdArrowRoundForward} from 'react-icons/io'
 
+//Propiedades data-aos ... ANIMACIONES
 
 const HeroSection = styled.section`
+    background-color: black;
     height: 100vh;
     max-height: 1100px;
     position: relative;
@@ -184,11 +186,14 @@ const Hero = ({slides}) => {
                         <HeroSlide key={index}>
                             {index === current && (
                                 <HeroSlider>
-                                <HeroImage src={slide.image} alt={slide.alt}/>
+                                <HeroImage data-aos="fade"
+                                data-aos-duration='2000' src={slide.image} alt={slide.alt}/>
                                     <HeroContent>
-                                        <h1>{slide.title}</h1>
-                                        <p>{slide.price}</p>
-                                        <Button size to={slide.path} primary='true' info>
+                                        <h1 data-aos='fade-down'
+                                        data-aos-duration='1200'>{slide.title}</h1>
+                                        <p data-aos='fade-down'
+                                        data-aos-duration='1000' data-aos-delay='200'>{slide.price}</p>
+                                        <Button data-aos="fade-down-right" data-aos-duration='1200' size to={slide.path} primary='true' info>
                                             {slide.label}
                                             <Arrow/>
                                         </Button>

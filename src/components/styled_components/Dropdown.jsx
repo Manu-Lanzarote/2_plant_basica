@@ -15,7 +15,8 @@ top: 0;
 left: 0;
 transition: 0.3s ease-in-out;
 opacity: ${({isOpen}) => (isOpen ? '1' : '0')};
-top: ${({isOpen}) => (isOpen ? '0' : '-100%')};;
+top: ${({isOpen}) => (isOpen ? '0' : '-100%')};
+box-shadow: 10px 0 800px black;
 `
 const Icon = styled.div`
 position: absolute;
@@ -69,21 +70,21 @@ padding: 1rem;
 
 const Dropdown = ({isOpen, toggle}) => {
     return (
-            <DropdownContainer isOpen={isOpen} onClick={toggle}>
-                <Icon onClick={toggle}>
-                    <CloseIcon/>
-                </Icon>
-                    <DropdownWrapper>
-                        <h1>NEW COLONY CLUB</h1>
-                        <DropdownMenu>
-                            {menuData.map((item, index) => (
-                                <DropdownLink to={item.link} key={index}>
-                                    {item.title}
-                                </DropdownLink>
-                            ))}
-                        </DropdownMenu>
-                    </DropdownWrapper>
-            </DropdownContainer>
+                <DropdownContainer isOpen={isOpen} onClick={toggle}>
+                    <Icon onClick={toggle}>
+                        <CloseIcon/>
+                    </Icon>
+                        <DropdownWrapper>
+                            <h1>NEW COLONY CLUB</h1>
+                            <DropdownMenu>
+                                {menuData.map((item, index) => (
+                                    <DropdownLink to={item.link} key={index}>
+                                        {item.title}
+                                    </DropdownLink>
+                                ))}
+                            </DropdownMenu>
+                        </DropdownWrapper>
+                </DropdownContainer>
     )
 }
 

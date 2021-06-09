@@ -1,5 +1,5 @@
 import styled, {css} from 'styled-components/macro'
-import { Button } from './styled_components/Button'
+import { Button } from '../styled_components/Button'
 //Flecha botón de contacto
 import {IoMdArrowForward} from 'react-icons/io'
 import {Link} from 'react-router-dom'

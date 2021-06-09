@@ -1,5 +1,5 @@
 import { sliderDataTwo } from '../../data/sliderData';
-import Hero from '../Hero';
+import Hero from '../pages/index/Hero';
 
 const Rentals = () => {
     return <Hero slides={sliderDataTwo}/>

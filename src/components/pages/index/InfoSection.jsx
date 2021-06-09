@@ -1,5 +1,5 @@
 import styled from 'styled-components/'
-import { Button } from './styled_components/Button'
+import { Button } from '../../styled_components/Button'
 
 import { IoMdArrowRoundForward } from 'react-icons/io'
 
@@ -71,12 +71,19 @@ const ImgCont = styled.div`
 const Arrow = styled(IoMdArrowRoundForward)`
 margin-left: 10px;
 `
-
-const InfoSection = ({heading, paragraphOne, paragraphTwo, buttonLabel, reverse, image}) => {
+//Los props vienen de infoData.js ({heading, paragraphOne, paragraphTwo, buttonLabel, reverse, image, delay})
+const InfoSection = ({heading, paragraphOne, paragraphTwo, buttonLabel, reverse, image, delay}) => {
     return (
         <Section>
             <Container>
-                <ColumnLeft>
+                <ColumnLeft
+                //reverse 
+                reverse={reverse}
+                data-aos='fade-up'
+                data-aos-duration='1000'
+                data-aos-once='true'
+                data-aos-delay={delay}
+                >
                     <h1>{heading}</h1>
                     <p>{paragraphOne}</p>
                     <p>{paragraphTwo}</p>
@@ -87,7 +94,12 @@ const InfoSection = ({heading, paragraphOne, paragraphTwo, buttonLabel, reverse,
                 </ColumnLeft>
                 <ColumnRight reverse={reverse}>
                     <ImgCont>
-                        <img src={image} alt='Home' css='' />
+                        <img src={image} alt='Home' css=''
+                        data-aos='zoom-out'
+                        data-aos-duration='1000'
+                        data-aos-once='true'
+                        data-aos-delay={delay}
+                        />
                     </ImgCont>
                 </ColumnRight>
             </Container>
