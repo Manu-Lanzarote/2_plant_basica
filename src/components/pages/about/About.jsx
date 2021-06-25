@@ -1,13 +1,4 @@
-import styled from 'styled-components'
-
-const Container = styled.div`
-background-color: pink;
-height: 100vh;
-
-h1{
-    padding: 5rem 0;
-}
-`
+import { Container } from "./AboutCss";
 
 const About = () => {
     return (

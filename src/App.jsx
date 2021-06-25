@@ -9,11 +9,11 @@ import FloatButton from './components/styled_components/FloatButton';
 //Rutas
 //useLocation lo necesitamos para que funcione useLayoutEffect
 import {Switch, Route, useLocation} from 'react-router-dom'
-import Home from './components/pages';
-import About from './components/pages/About';
-import Homes from './components/pages/Homes';
-import Rentals from './components/pages/Rentals';
-import ContactUs from './components/pages/ContactUs';
+import Home from './components/pages/Home';
+import About from './components/pages/about/About';
+import Homes from './components/pages/homes/Homes';
+import Rentals from './components/pages/rentals/Rentals';
+import ContactUs from './components/pages/contactUs/ContactUs';
 
 //Animaciones AOS
 import Aos from 'aos'
