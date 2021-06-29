@@ -1,7 +1,10 @@
-import { Section, Container, Heading, InfoRow, InfoWrap, Image, InfoLink, Arrow,  } from './ListingsCss'
+import 'styled-components/macro'
+
+import { Section, Container, Heading, InfoRow, InfoWrap, Image, InfoLink, Arrow } from './ListingsCss'
 
 import Home1 from '../../../../images/homeOne.jpg'
 import Home2 from '../../../../images/homeTwo.jpg'
+
 
 const Listings = () => {
     return (

@@ -1,67 +1,11 @@
-import styled, {css} from 'styled-components/macro'
-//Importo useLocation para dar funcionalidad al cambio de color de la barra de navegación
-import {Link, useLocation} from 'react-router-dom'
+import { Nav, Logo, MenuBars, NavMenu, NavMenuLinks } from './NavBarCss'
+
+import {useLocation} from 'react-router-dom'
 //Funcionalidad cambiar el color de la barra de navegación al hacer scroll
 import {useState, useEffect} from 'react'
 
-import {menuData} from '../../data/menuData'
+import {menuData} from '../../../data/menuData'
 
-//Menú hamburguesa
-import {FaBars} from 'react-icons/fa'
-
-
-
-const Nav = styled.nav`
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    z-index: 100;
-    position: fixed;
-    width: 100vw;
-`;
-
-const NavLink = css`
-    color: #fff;
-    display: flex;
-    align-items: center;
-    padding: 0 1rem;
-    height: 100%;
-    cursor: pointer;
-    text-decoration: none;;
-`;
-
-const Logo = styled(Link)`
-    ${NavLink}
-    font-size: 1.3rem;
-    font-weight: 700;
-`;
-
-const MenuBars = styled(FaBars)`
-    display: none;
-    color: white;
-    font-size: 1.7rem;
-    cursor: pointer;
-
-    @media screen and (max-width: 768px){
-        display: block;
-    }
-`;
-
-const NavMenu = styled.i`
-    display: flex;
-    align-items: center;
-    margin-right: 5rem;
-
-    @media screen and (max-width: 768px){
-        display: none;
-    }
-`;
-
-const NavMenuLinks = styled(Link)`
-    ${NavLink}
-    font-size: 1.2rem;
-`;
 
 const Navbar = ({toggle}) => {
     //Funciones para cambiar el color de la barra de navegación al hacer scroll

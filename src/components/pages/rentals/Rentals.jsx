@@ -1,8 +1,11 @@
-import { sliderDataTwo } from '../../../data/sliderData';
-import Hero from '../homeContent/hero/Hero';
+import { Container } from "./RentalsCss";
 
 const Rentals = () => {
-    return <Hero slides={sliderDataTwo}/>
+    return (
+        <Container>
+            <h1>PÁGINA RENTALS</h1>
+        </Container>
+    )
 }
 
 export default Rentals;

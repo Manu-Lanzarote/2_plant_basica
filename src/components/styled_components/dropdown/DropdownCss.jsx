@@ -1,9 +1,8 @@
 import { FaTimes } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components'
-import { menuData } from '../../data/menuData';
 
-const DropdownContainer = styled.div`
+export const DropdownContainer = styled.div`
 position: fixed;
 z-index: 999;
 width: 69%;
@@ -18,7 +17,7 @@ opacity: ${({isOpen}) => (isOpen ? '1' : '0')};
 top: ${({isOpen}) => (isOpen ? '0' : '-100%')};
 box-shadow: 10px 0 800px black;
 `
-const Icon = styled.div`
+export const Icon = styled.div`
 position: absolute;
 top: 1.2rem;
 right: 1.5rem;
@@ -33,10 +32,10 @@ outline: none;
     }
 `
 
-const CloseIcon = styled(FaTimes)`
+export const CloseIcon = styled(FaTimes)`
 color: white;
 `
-const DropdownWrapper = styled.div`
+export const DropdownWrapper = styled.div`
 h1{
     color: white;
     font-size: 1.5rem;
@@ -45,7 +44,7 @@ h1{
 }
 `
 
-const DropdownMenu = styled.div`
+export const DropdownMenu = styled.div`
 display:grid;
 grid-template-columns: 1fr;
 grid-template-rows: repeat(4, 80px);
@@ -57,7 +56,7 @@ margin-bottom: 4rem;
 }
 `
 
-const DropdownLink = styled(Link)`
+export const DropdownLink = styled(Link)`
 display: flex;
 align-items: center;
 justify-content: center;
@@ -67,25 +66,3 @@ text-decoration: none;
 transition: 0.2s ease-in-out;
 padding: 1rem;
 `
-
-const Dropdown = ({isOpen, toggle}) => {
-    return (
-                <DropdownContainer isOpen={isOpen} onClick={toggle}>
-                    <Icon onClick={toggle}>
-                        <CloseIcon/>
-                    </Icon>
-                        <DropdownWrapper>
-                            <h1>NEW COLONY CLUB</h1>
-                            <DropdownMenu>
-                                {menuData.map((item, index) => (
-                                    <DropdownLink to={item.link} key={index}>
-                                        {item.title}
-                                    </DropdownLink>
-                                ))}
-                            </DropdownMenu>
-                        </DropdownWrapper>
-                </DropdownContainer>
-    )
-}
-
-export default Dropdown;

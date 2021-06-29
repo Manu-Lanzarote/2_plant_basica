@@ -7,7 +7,8 @@ import Features from './homeContent/features/Features';
 import { sliderData } from "../../data/sliderData";
 
 //Data de la infoSection
-import { InfodataOne, InfodataTwo } from '../../data/infoData'
+import { InfodataOne } from '../../data/infoData'
+import Cards from "./homeContent/cards/Cards";
 
 const Home = () => {
     return (
@@ -16,7 +17,8 @@ const Home = () => {
             <InfoSection {...InfodataOne}/>
             <Listings/>
             <Features/>
-            <InfoSection {...InfodataTwo}/>
+            <Cards/>
+            {/* <InfoSection {...InfodataTwo}/> */}
         </div>
     )
 }

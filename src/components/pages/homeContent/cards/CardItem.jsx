@@ -1,16 +1,22 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-const CardItem = () => {
+const CardItem = (props) => {
     return (
         <>
-            <CardItem>
-                <CardsItemLink>
-                    <CardFigure>
-                        <img
-                    </CardFigure>
-                </CardsItemLink>
-            </CardItem>
+            <li className='cards__item'>
+                <Link className='cards__item__link' to={props.path}>
+                    <figure className='cards__item__pic-wrap'
+                    //data-catagory lo paso a la clase
+                    //.cards__item__pic-wrap::after de Cards.css
+                    data-category={props.label}>
+                        <img src={props.src} alt='Card' className='cards__item__img'/>
+                    </figure>
+                    <div className="cards__item__info">
+                        <h5 className="cards__item__text">{props.text}</h5>
+                    </div>
+                </Link>
+            </li>
         </>
     )
 }

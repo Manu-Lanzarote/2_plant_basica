@@ -1,10 +1,9 @@
 //Funcionalidad para abrir y cerrar el Dropdown
 import {useEffect, useState, useLayoutEffect} from 'react'
 
-import Dropdown from "./components/styled_components/Dropdown";
-import NavBar from "./components/styled_components/NavBar";
-import Footer from './components/styled_components/Footer';
-import FloatButton from './components/styled_components/FloatButton';
+import Dropdown from "./components/styled_components/dropdown/Dropdown";
+import NavBar from "./components/styled_components/navbar/NavBar";
+import Footer from './components/styled_components/footer/Footer';
 
 //Rutas
 //useLocation lo necesitamos para que funcione useLayoutEffect
@@ -18,6 +17,10 @@ import ContactUs from './components/pages/contactUs/ContactUs';
 //Animaciones AOS
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+
+//Botón Flotante
+import FloatActionButton from './components/styled_components/fab/FloatActionButton';
+
 
 function App() {
   //Funcionalidad para el botón de menú y el botón de cerrar del Dropdown
@@ -49,8 +52,8 @@ function App() {
         <Route path='/rentals' component={Rentals}/>
         <Route path='/contact' component={ContactUs}/>
       </Switch>
+      <FloatActionButton/>
       <Footer/>
-      <FloatButton/>
     </>
   );
 }
