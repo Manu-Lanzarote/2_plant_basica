@@ -1,28 +1,31 @@
 .fab-container {
   position: fixed;
-  bottom: 50px;
-  right: 50px;
+  bottom: 40px;
+  right: 30px;
   z-index: 999;
   cursor: pointer;
 }
 
 .fab-icon-holder {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background-color: rgb(245, 76, 104);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  background-color: rgb(255, 78, 107);
+  box-shadow: 2px 0px 8px 1px rgba(0, 0, 0, 0.3);
 }
 
 .fab-icon-holder:hover {
-  opacity: 0.8;
+  transform: rotate(45deg);
+  transition: all 0.5s ease;
+  box-shadow: 2px 0px 8px 1px rgba(0, 0, 0, 0.7);
 }
 
 .whats {
-  background-color: yellowgreen;
+  background-color: #3cb362;
 }
+
 .mail {
-  background-color: black;
+  background-color: rgb(76, 94, 253);
 }
 
 .fab-icon-holder i {
@@ -38,7 +41,7 @@
 .fab {
   width: 55px;
   height: 55px;
-  background-color: red;
+  background-color: #f44336;
 }
 
 .fab-options {
@@ -49,7 +52,7 @@
   right: 0;
   opacity: 0;
 
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
   transform: scale(0);
   transform-origin: bottom;
 }
@@ -58,6 +61,7 @@
 .fab-options:hover {
   opacity: 1;
   transform: scale(1);
+  transition: all 0.5s ease;
 }
 
 .fab-options li {

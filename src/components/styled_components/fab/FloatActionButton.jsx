@@ -14,18 +14,18 @@ const FloatActionButton = () => {
            
             <ul className="fab-options">
                 <li>
-                    <div className='fab-icon-holder'>
-                        <i><BiPhone/></i>
+                    <div className='fab-icon-holder whats'>
+                    <a href="https://wa.me/34639056797" target='_blank' rel="noreferrer"><i><ImWhatsapp/></i></a>
                     </div>
                 </li>
                 <li>
-                    <div className='fab-icon-holder whats'>
-                        <i><ImWhatsapp/></i>
+                    <div className='fab-icon-holder'>
+                    <a href="tel:+34639056797"><i><BiPhone/></i></a>
                     </div>
                 </li>
                 <li>
                     <div className='fab-icon-holder mail'>
-                        <i><BiMailSend/></i>
+                        <a href="/contact"><i><BiMailSend/></i></a>
                     </div>
                 </li>
             </ul>

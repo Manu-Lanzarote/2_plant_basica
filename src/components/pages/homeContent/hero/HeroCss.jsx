@@ -97,8 +97,8 @@ export const Arrow = styled(IoMdArrowForward)`
 
 export const SliderButtons = styled.div`
     position: absolute;
-    bottom: 60px;
-    right: 80px;
+    bottom: 90px;
+    right: 100px;
     display: flex;
     z-index: 10;
 `;
