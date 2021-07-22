@@ -1,12 +1,12 @@
-import image1 from "../images/church-2464899_1280.jpg";
-import image2 from "../images/house-1477041_1280.jpg";
-import image3 from "../images/house-1867187_1280.jpg";
-import image4 from "../images/lake-192990_1280.jpg";
+import image1 from "../../../../images/church-2464899_1280.jpg";
+import image2 from "../../../../images/house-1477041_1280.jpg";
+import image3 from "../../../../images/house-1867187_1280.jpg";
+import image4 from "../../../../images/lake-192990_1280.jpg";
 
 //Imágenes para la página Rentals
-import image5 from "../images/homeOne.jpg";
-import image6 from "../images/homeTwo.jpg";
-import image7 from "../images/interior1.jpg";
+import image5 from "../../../../images/homeOne.jpg";
+import image6 from "../../../../images/homeTwo.jpg";
+import image7 from "../../../../images/interior1.jpg";
 
 export const sliderData = [
   {

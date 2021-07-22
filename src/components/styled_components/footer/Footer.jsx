@@ -1,8 +1,5 @@
-import { Section, Container, FooterTop, Quote, FooterInfo, FooterBottom, SocialIcons, Youtube, Facebook, Instagram, Contact } from './FooterCss'
+import { Section, Container, FooterTop, Quote, FooterInfo, FooterBottom, SocialIcons, Youtube, Facebook, Instagram } from './FooterCss'
 
-import { Button } from '../Button'
-//Flecha botón de contacto
-import {IoMdArrowForward} from 'react-icons/io'
 import {Link} from 'react-router-dom'
 
 const Footer = () => {
@@ -40,11 +37,6 @@ const Footer = () => {
                             <Instagram/>
                         </a>
                     </SocialIcons>
-                    <Contact>
-                        <Button to='/home' footer>
-                            Let´s Chat <IoMdArrowForward/>
-                        </Button>
-                    </Contact>
                 </FooterBottom>
             </Container>
         </Section>

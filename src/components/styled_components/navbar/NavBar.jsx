@@ -4,7 +4,7 @@ import {useLocation} from 'react-router-dom'
 //Funcionalidad cambiar el color de la barra de navegación al hacer scroll
 import {useState, useEffect} from 'react'
 
-import {menuData} from '../../../data/menuData'
+import {menuData} from './menuData'
 
 
 const Navbar = ({toggle}) => {
@@ -41,7 +41,7 @@ const Navbar = ({toggle}) => {
         //En la etiqueta Nav meto la variable style de la función anterior
         <Nav style={style}>
             <Logo to='/'>
-                NEW COLONY CLUB
+                H2O SPORTS LANZAROTE
             </Logo>
             <MenuBars onClick={toggle}/>
             <NavMenu>

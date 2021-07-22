@@ -4,10 +4,10 @@ import Listings from './homeContent/listings/Listings';
 import Features from './homeContent/features/Features';
 
 //Data de Hero
-import { sliderData } from "../../data/sliderData";
+import { sliderData } from "./homeContent/hero/sliderData";
 
 //Data de la infoSection
-import { InfodataOne } from '../../data/infoData'
+import { InfodataOne } from './homeContent/infoSection/infoData'
 import Cards from "./homeContent/cards/Cards";
 
 const Home = () => {

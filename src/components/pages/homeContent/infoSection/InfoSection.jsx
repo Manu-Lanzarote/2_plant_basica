@@ -9,7 +9,7 @@ const InfoSection = ({heading, paragraphOne, paragraphTwo, buttonLabel, reverse,
         <Section>
             <Container>
                 <ColumnLeft
-                //reverse 
+                //reverse
                 reverse={reverse}
                 data-aos='fade-up'
                 data-aos-duration='1000'

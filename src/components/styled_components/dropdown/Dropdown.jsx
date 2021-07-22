@@ -1,6 +1,6 @@
 import { DropdownContainer, Icon, CloseIcon, DropdownWrapper, DropdownMenu, DropdownLink } from './DropdownCss';
 
-import { menuData } from '../../../data/menuData';
+import { menuData } from '../navbar/menuData';
 
 
 const Dropdown = ({isOpen, toggle}) => {

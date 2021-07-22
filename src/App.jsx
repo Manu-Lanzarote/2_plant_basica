@@ -20,6 +20,7 @@ import 'aos/dist/aos.css'
 
 //Botón Flotante
 import FloatActionButton from './components/styled_components/fab/FloatActionButton';
+import LineaPoliticas from './components/styled_components/footer/politicas/LineaPoliticas';
 
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
     setIsOpen(!isOpen)
   }
 
-  //Necesitamos useLayaoutEffect para asegurarnis de que al ir a las páginas desde el menú se abren en el inicio. Arriba del todo.
+  //Necesitamos useLayaoutEffect para asegurarnos de que al ir a las páginas desde el menú se abren en el inicio. Arriba del todo.
   const location = useLocation()
 
   useLayoutEffect(()=>{
@@ -54,6 +55,7 @@ function App() {
       </Switch>
       <FloatActionButton/>
       <Footer/>
+      <LineaPoliticas/>
     </>
   );
 }
