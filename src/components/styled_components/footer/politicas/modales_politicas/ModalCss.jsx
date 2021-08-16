@@ -47,6 +47,7 @@ export const ModalContent = styled.div`
     }
     h1{
         font-size: 1rem;
+        padding-top: 1rem;
     }
 `
 

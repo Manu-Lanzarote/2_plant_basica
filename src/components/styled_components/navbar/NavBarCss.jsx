@@ -32,7 +32,7 @@ export const NavLink = css`
 
 export const Logo = styled(Link)`
     ${NavLink}
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 700;
 
     &:hover{
